@@ -1,0 +1,30 @@
+{
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org",
+            "only": [
+                "wpackagist-plugin/*"
+            ]
+        }
+    ],
+    "require": {
+      "php": ">=8.0",
+      "roots/wordpress": "6.1.1",
+        "wpackagist-plugin/wp-graphql": "^1.14",
+        "wpackagist-plugin/wp-gatsby": "^2.3",
+        "wp-graphql/wp-graphql-acf": "^0.6.1"
+    },
+    "extra": {
+        "installer-paths": {
+            "app/plugins/{$name}/": ["type:wordpress-plugin"]
+        },
+        "wordpress-install-dir": "wp"
+    },
+    "config": {
+        "allow-plugins": {
+            "roots/wordpress-core-installer": true,
+            "composer/installers": true
+        }
+    }
+}
